@@ -1,5 +1,7 @@
 import dresseur.Entraineur
 import monstre.EspeceMonstre
+import monde.Zone
+
 
 /**
  * Change la couleur du message donné selon le nom de la couleur spécifié.
@@ -83,14 +85,22 @@ var especeGalum = EspeceMonstre(
     "Peut rester immobile des heures comme une statue.",
     "Sérieux, stoïque, fiable"
 )
+// fin des espèces
+
+var route1 = Zone(
+    1, "Route 1", 100,
+    mutableListOf(especeSpringLeaf, especeFlamkip, especeAquamy)
+)
+
+var route2 = Zone(
+    2, "Route 2", 200,
+    mutableListOf(especeLaoumi, especeBugsyface, especeGalum)
+)
+
 
 fun main() {
-    println(especeSpringLeaf.afficheArt())
-    println(especeSpringLeaf.afficheArt(false))
+        route1.zoneSuivante = route2
+        route2.zonePrecedente = route1
+    }
 
-    println(especeFlamkip.afficheArt())
-    println(especeFlamkip.afficheArt(false))
 
-    println(especeAquamy.afficheArt())
-    println(especeAquamy.afficheArt(false))
-}

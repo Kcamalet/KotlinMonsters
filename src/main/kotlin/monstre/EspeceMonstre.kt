@@ -23,7 +23,7 @@ import java.io.File
  * @property modPv Multiplicateur de points de vie utilisé lors de la montée de niveau.
  * @property description Description de l'espèce (255 caractères max).
  * @property particularites Particularités de l'espèce.
- * @property caractères Traits de caractère de l'espèce.
+ * @property caracteres Traits de caractère de l'espèce.
  */
 class EspeceMonstre(
     var id: Int,
@@ -43,7 +43,7 @@ class EspeceMonstre(
     val modPv: Double,
     val description: String = "",
     val particularites: String = "",
-    val caractères: String = "",
+    val caracteres: String = "",
 ) {
     /**
      * Affiche la représentation artistique ASCII du monstre.
