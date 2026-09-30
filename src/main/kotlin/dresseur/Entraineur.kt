@@ -1,5 +1,7 @@
 package dresseur
 
+import monstre.IndividuMonstre
+import java.time.LocalDate
 
 /**
  * Représente un entraîneur dans le contexte du jeu.
@@ -7,17 +9,20 @@ package dresseur
  * Un entraîneur est responsable de gérer une équipe de monstres, une boîte pour stocker des monstres supplémentaires
  * et un sac contenant des objets appelés MonsterKubes. L'entraîneur a également une somme d'argent associée.
  *
+ * Exemple : l'entraîneuse Ondine, avec un id, un nom et une somme d'argent.
+ *
  * @property id L'identifiant unique de l'entraîneur.
  * @property nom Le nom de l'entraîneur.
  * @property argents La quantité d'argent en possession de l'entraîneur.
+ * @property equipeMonstre L'équipe de monstres de l'entraîneur.
+ * @property boiteMonstre Les monstres stockés par l'entraîneur.
  */
-
 class Entraineur(
     var id: Int,
     var nom: String,
-    var argents:Int,
-    //TODO equipeMonstre
-    //TODO boiteMonstre
+    var argents: Int,
+    var equipeMonstre: MutableList<IndividuMonstre> = mutableListOf(),
+    var boiteMonstre: MutableList<IndividuMonstre> = mutableListOf(),
     //TODO sacAKube
 ) {
     /**
@@ -27,9 +32,8 @@ class Entraineur(
      * 1. Le nom de l'entraîneur.
      * 2. La somme d'argent qu'il possède.
      */
-    fun afficheDetail(){
+    fun afficheDetail() {
         println("Dresseur : ${this.nom}")
         println("Argents: ${this.argents} ")
     }
 }
-
