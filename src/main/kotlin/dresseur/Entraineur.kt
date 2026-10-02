@@ -2,7 +2,6 @@ package dresseur
 
 import item.Item
 import monstre.IndividuMonstre
-import java.time.LocalDate
 
 /**
  * Représente un entraîneur dans le contexte du jeu.
