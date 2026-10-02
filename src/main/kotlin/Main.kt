@@ -3,7 +3,9 @@ import monstre.EspeceMonstre
 import monde.Zone
 import monstre.IndividuMonstre
 import item.Badge
-
+import item.MonsterKube
+import item.Utilisable
+import item.Item
 
 
 /**
@@ -100,15 +102,17 @@ var route2 = Zone(
     mutableListOf(especeLaoumi, especeBugsyface, especeGalum)
 )
 
+var kube1 = MonsterKube(1, "Kube", "Un kube de base pour capturer les monstres.", 40.0)
+
 
 fun main() {
     route1.zoneSuivante = route2
     route2.zonePrecedente = route1
 
+
     val monstre1 = IndividuMonstre(1, "springleaf", 1500.0, especeSpringLeaf)
     val monstre2 = IndividuMonstre(2, "flamkip", 1500.0, especeFlamkip)
     val monstre3 = IndividuMonstre(3, "aquamy", 1500.0, especeAquamy)
-
     val badgePierre = Badge(1, "Badge Roche", "Badge gagné lorsque le joueur atteint l'arène de pierre.", rival)
 }
 

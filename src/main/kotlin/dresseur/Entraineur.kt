@@ -1,5 +1,6 @@
 package dresseur
 
+import item.Item
 import monstre.IndividuMonstre
 import java.time.LocalDate
 
@@ -23,7 +24,7 @@ class Entraineur(
     var argents: Int,
     var equipeMonstre: MutableList<IndividuMonstre> = mutableListOf(),
     var boiteMonstre: MutableList<IndividuMonstre> = mutableListOf(),
-    //TODO sacAKube
+    var sacAItems: MutableList<Item> = mutableListOf()
 ) {
     /**
      * Affiche les détails de l'entraîneur, y compris son nom et la quantité d'argent en sa possession.
