@@ -2,6 +2,7 @@ import dresseur.Entraineur
 import monstre.EspeceMonstre
 import monde.Zone
 import monstre.IndividuMonstre
+import item.Badge
 
 
 
@@ -101,14 +102,14 @@ var route2 = Zone(
 
 
 fun main() {
+    route1.zoneSuivante = route2
+    route2.zonePrecedente = route1
 
     val monstre1 = IndividuMonstre(1, "springleaf", 1500.0, especeSpringLeaf)
     val monstre2 = IndividuMonstre(2, "flamkip", 1500.0, especeFlamkip)
     val monstre3 = IndividuMonstre(3, "aquamy", 1500.0, especeAquamy)
-    monstre1.attaquer(monstre2)
-    monstre1.renommer()
-    monstre1.afficheDetail()
-    println(monstre1.nom)
+
+    val badgePierre = Badge(1, "Badge Roche", "Badge gagné lorsque le joueur atteint l'arène de pierre.", rival)
 }
 
 
